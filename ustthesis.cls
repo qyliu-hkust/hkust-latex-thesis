@@ -1757,15 +1757,17 @@ scholarly research.}
 %      \vglue 8ex
 %      {\normalsize A Thesis Presented to \par}
       \vglue 12ex
-      {\normalsize A Thesis Submitted to \par}
+    %   {\normalsize A Thesis Submitted to \par}
+    {\normalsize Department of Computer Science and Engineering\par}
       {\normalsize The Hong Kong University of Science and Technology\par}
+      {\normalsize Supervised by Prof. {\@advisor}}
 % Chan:
 %	Make changes according to the guidelines released on March 2001.
 %      {\normalsize in Partial Fulfillment\par}
 %      {\normalsize of the Requirements for\par}
 %      {\normalsize the Degree of \@degree\par}
-      {\normalsize in Partial Fulfillment of the Requirements for\par}
-      {\normalsize the Degree of \@DegreeFName\par}
+    %   {\normalsize in Partial Fulfillment of the Requirements for\par}
+    %   {\normalsize the Degree of \@DegreeFName\par}
 %    \ifAM
 %      {\normalsize Master of Arts\par}
 %    \else
@@ -1783,7 +1785,7 @@ scholarly research.}
 %	The following should be \@subject instead.
 %     {\normalsize in \@department\par}
 %      \vglue 7em
-     {\normalsize in \@subject\par}
+    %  {\normalsize in \@subject\par}
      \vglue 6ex
 % Chan:
 %	Make changes according to the guidelines released on March 2001.
@@ -1793,99 +1795,99 @@ scholarly research.}
       {\normalsize \Copyright}
     \end{center}
     \addcontentsline{toc}{chapter}{Title Page}
-    \newpage
+    % \newpage
 
 % End of Page 1
 
-    \authorise
+    % \authorise
 
 % End of Page 2
 
 %    \let\footnotesize\small % Local definitions to make \thanks produce
 %    \let\footnoterule\relax % \normalsize footnotes with no separating rule.
 %    \setcounter{page}{0}
-    \null
-    \parskip=0pt
-%    \ifPhD
-      \setcounter{@minmembers}{8} % PhD committees have at least 5 members
+%     \null
+%     \parskip=0pt
+% %    \ifPhD
+%       \setcounter{@minmembers}{8} % PhD committees have at least 5 members
 %    \else
 %      \setcounter{@minmembers}{3} % Masters committees have at least 3 members
 %    \fi
 % Chan:
 %	Add certain vertical space before the title.
-    \TOffset
-    \begin{center}
-      {\Lbi \uppercase\expandafter{\@title} \par}
-% Chan:
-%	Make changes according to the guidelines released on March 2001.
-%      \vglue 8ex
-%      {\lbi BY \par}
-%      \vglue 8ex
-      \vglue 6ex
-      {\lbi by \par}
-      \vglue 2ex
-      {\lbi \uppercase\expandafter{\@author} \par}
-% Chan:
-%	Extend the centering environment for the whole page.
-%    \end{center}
-        \textspace
-        \mbox{}
-        \par\indent
-% Chan:
-%	Make changes according to the guidelines released on March 2001.
-    {This is to certify that I have examined the above \@DegreeSName thesis} \\
-    {and have found that it is complete and satisfactory in all respects,} \\
-    {and that any and all revisions required by} \\
-    {the thesis examination committee have been made.}
-%    \begin{flushleft}
-    \vglue 0ex plus 1fill
-%    \parbox{0.75\textwidth}{
-    \parbox{\maxmem}{
-%      APPROVED:\par
-%      \vglue 6ex
-      {	% @membersprinted counts the number of committee members printed so far
-	\newcounter{@membersprinted}\setcounter{@membersprinted}{0}
- 	% Print the committee members defined by the user.
-	\loop
-	\ifnum \value{@membersprinted} < \value{@members} 
-	  \addtocounter{@membersprinted}{1}
-	  \ifcase\value{@membersprinted}
-	    \typeout{Thesis style--internal error printing members.} \or
-	    \begin{center}\@membera\end{center} \or
-	    \begin{center}\@memberb\end{center} \or
-	    \begin{center}\@memberc\end{center} \or
-	    \begin{center}\@memberd\end{center} \or
-	    \begin{center}\@membere\end{center} \or
-	    \begin{center}\@memberf\end{center} \or
-	    \begin{center}\@memberg\end{center} \or
-	    \begin{center}\@memberh\end{center}
-	  \else \typeout{Thesis style--internal error printing members.}
-	  \fi
-	\repeat
-	% If the minimum number of signature lines haven't been printed,
-	% print some more.
-%	\loop
-%	\ifnum \value{@membersprinted} < \value{@minmembers}
-%	  \addtocounter{@membersprinted}{1}
-%	  \@member{}
-%	\repeat
-      }
-%    \vglue -6ex
-    \vglue -3ex
-    } \par
-    {\normalsize Department of \@department\par}
-%    \vglue 3ex plus 1fill
-    {\normalsize \today\par}
-%   {\normalsize Date:\hfill\rule[-.4ex]{2.35in}{.5pt}}
-%    }\hfill\par
-%    \end{flushleft}
-% Chan:
-%	Move \end{center} from above position to here.
-    \end{center}
-    \addcontentsline{toc}{chapter}{Signature Page}
-    \typeout{Signature Page}
-    \textspaceundo
-    \newpage
+%     \TOffset
+%     \begin{center}
+%       {\Lbi \uppercase\expandafter{\@title} \par}
+% % Chan:
+% %	Make changes according to the guidelines released on March 2001.
+% %      \vglue 8ex
+% %      {\lbi BY \par}
+% %      \vglue 8ex
+%       \vglue 6ex
+%       {\lbi by \par}
+%       \vglue 2ex
+%       {\lbi \uppercase\expandafter{\@author} \par}
+% % Chan:
+% %	Extend the centering environment for the whole page.
+% %    \end{center}
+%         \textspace
+%         \mbox{}
+%         \par\indent
+% % Chan:
+% %	Make changes according to the guidelines released on March 2001.
+%     {This is to certify that I have examined the above \@DegreeSName thesis} \\
+%     {and have found that it is complete and satisfactory in all respects,} \\
+%     {and that any and all revisions required by} \\
+%     {the thesis examination committee have been made.}
+% %    \begin{flushleft}
+%     \vglue 0ex plus 1fill
+% %    \parbox{0.75\textwidth}{
+%     \parbox{\maxmem}{
+% %      APPROVED:\par
+% %      \vglue 6ex
+%       {	% @membersprinted counts the number of committee members printed so far
+% 	\newcounter{@membersprinted}\setcounter{@membersprinted}{0}
+%  	% Print the committee members defined by the user.
+% 	\loop
+% 	\ifnum \value{@membersprinted} < \value{@members} 
+% 	  \addtocounter{@membersprinted}{1}
+% 	  \ifcase\value{@membersprinted}
+% 	    \typeout{Thesis style--internal error printing members.} \or
+% 	    \begin{center}\@membera\end{center} \or
+% 	    \begin{center}\@memberb\end{center} \or
+% 	    \begin{center}\@memberc\end{center} \or
+% 	    \begin{center}\@memberd\end{center} \or
+% 	    \begin{center}\@membere\end{center} \or
+% 	    \begin{center}\@memberf\end{center} \or
+% 	    \begin{center}\@memberg\end{center} \or
+% 	    \begin{center}\@memberh\end{center}
+% 	  \else \typeout{Thesis style--internal error printing members.}
+% 	  \fi
+% 	\repeat
+% 	% If the minimum number of signature lines haven't been printed,
+% 	% print some more.
+% %	\loop
+% %	\ifnum \value{@membersprinted} < \value{@minmembers}
+% %	  \addtocounter{@membersprinted}{1}
+% %	  \@member{}
+% %	\repeat
+%       }
+% %    \vglue -6ex
+%     \vglue -3ex
+%     } \par
+%     {\normalsize Department of \@department\par}
+% %    \vglue 3ex plus 1fill
+%     {\normalsize \today\par}
+% %   {\normalsize Date:\hfill\rule[-.4ex]{2.35in}{.5pt}}
+% %    }\hfill\par
+% %    \end{flushleft}
+% % Chan:
+% %	Move \end{center} from above position to here.
+%     \end{center}
+    % \addcontentsline{toc}{chapter}{Signature Page}
+    % \typeout{Signature Page}
+    % \textspaceundo
+    % \newpage
   \end{titlepage}
 
 %
